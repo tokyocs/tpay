@@ -1,0 +1,13 @@
+/* 初期設定・変数設定 */
+:root {
+  /* COLOR SETTING */
+  --main-orange: #FF8700;
+}
+
+/* BODYレイアウト */
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--main-orange);
+}

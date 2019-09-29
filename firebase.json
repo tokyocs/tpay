@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "tcspay",
     "public": "hosting",
     "ignore": [
       "firebase.json",
