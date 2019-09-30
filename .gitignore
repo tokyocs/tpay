@@ -63,3 +63,5 @@ typings/
 # MAC USELESS FOLES
 .DS_Store
 *.DS_Store
+
+.firebaserc
