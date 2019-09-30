@@ -5,9 +5,12 @@
 }
 
 /* BODYレイアウト */
-body {
+main {
   width: 100vw;
   height: 100vh;
   margin: 0;
   background-color: var(--main-orange);
 }
+.main-logo {
+  
+
