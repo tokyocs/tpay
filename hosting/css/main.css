@@ -5,12 +5,34 @@
 }
 
 /* BODYレイアウト */
-main {
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.main {
   width: 100vw;
   height: 100vh;
   margin: 0;
   background-color: var(--main-orange);
 }
+
+.signin {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: green;
+}
+
+.top {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--main-orange);
+}
+
 .main-logo {
-  
+  color: white;
+}
 
