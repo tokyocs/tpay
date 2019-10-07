@@ -12,5 +12,6 @@ main {
   background-color: var(--main-orange);
 }
 .main-logo {
-  
+  font-size: 40px
+}  
 
