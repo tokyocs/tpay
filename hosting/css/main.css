@@ -32,8 +32,9 @@ body {
   background-color: var(--main-orange);
 }
 
-.main-logo {
-  font-size: 40px
+h1 {
+  margin:0;
+  font-size: 40px;
   color: white;
 }
 
