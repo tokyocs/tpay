@@ -18,23 +18,41 @@
   <link rel="icon" href="/img/favicon.ico">
 </head>
 <body>
-<div class="QRreader" id="QRreader">
-  <h1>QRCode Reader</h1>
-
-  <section id="contents">
-    <!-- カメラ映像 -->
+  <div class="QRreader" id="QRreader">
+    <h1>QRCode Reader</h1>
+    <section id="contents">
+      <!-- カメラ映像 -->
+      <video id="camera" width="300" height="200" muted></video>
+      <!-- 処理用 -->
+      <canvas id="picture" width="300" height="200"></canvas>
+      <!-- 読み取り結果 -->
+      <div id="result">
+        <small>※ここに読み取り結果が表示されます※</small>
+      </div>
+    </section>
+  </div>
+  <div class="main" id="main">
+    <h1 class="main-logo">TPAY!</h1>
+  </div>
+  <div class="signin" id="signin">
+    <h1>Login Page</h1>
+  </div>
+  <div class="top" id="top">
+    <h1>TOP page</h1>
+  </div>
+  <div class="qr" id="qr">
     <video id="camera" width="300" height="200" muted></video>
-
-    <!-- 処理用 -->
-    <canvas id="picture" width="300" height="200"></canvas>
-
-    <!-- 読み取り結果 -->
-    <div id="result">
-      <small>※ここに読み取り結果が表示されます※</small>
-    </div>
-  </section>
-
-  <script src="./js/jsQR.js"></script>
+    <div id="yuto" class="yuto"></div>
+  </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.0.0/firebase-app.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.0.0/firebase-analytics.js"></script>
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/jsQR.js"></script>
   <script>
   const video  = $("#camera");     // === document.querySelector("#camera");
   const canvas = $("#picture");    // === document.querySelector("#picture");
@@ -98,13 +116,10 @@
     //----------------------
     else{
       // 0.3秒後にもう一度チェックする
-      setTimeout( () => {
+      setTimeout(() => {
         checkPicture();
-      ), 300);
-      }
+      },300)};
   }
-
-
   /**
     * 発見されたQRコードに線を引く
     *
@@ -168,26 +183,4 @@
     return(result);
   }
 </script>
-</div>
-  <div class="main" id="main">
-    <h1 class="main-logo">TPAY!</h1>
-  </div>
-  <div class="signin" id="signin">
-    <h1>Login Page</h1>
-  </div>
-  <div class="top" id="top">
-    <h1>TOP page</h1>
-  </div>
-  <div class="qr" id="qr">
-    <video id="camera" width="300" height="200" muted></video>
-    <div id="yuto" class="yuto"></div>
-  </div>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="/__/firebase/7.0.0/firebase-app.js"></script>
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-       https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="/__/firebase/7.0.0/firebase-analytics.js"></script>
-  <!-- Initialize Firebase -->
-  <script src="/__/firebase/init.js"></script>
-  <script src="/js/app.js"></script>
 </body>
